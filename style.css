@@ -20,11 +20,13 @@ section{
 }
 
 .about{
-    background-color: #395C6B;
+    background-color: #1f1c2f;
+    color: #8febd5;
 }
 
 .buttons{
-    background-color: #80A4ED;
+    background-color: #BDE5E1;
+    color: #025764;
 }
 
 .education{
