@@ -1,31 +1,48 @@
 *{
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-body{
     margin: 0;
     padding: 0;
-}
-
-section{
-    width: 100%;
-    height: 100vh;
-    background-size:  cover;
-    scroll-snap-align: start;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    scroll-behavior: smooth;
-    overflow: auto;
     scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
-#name_heading{
-    font-size: 650%;
-    text-align: center;
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
 }
 
+.about{
+    background-color: #395C6B;
+}
+
+.buttons{
+    background-color: #80A4ED;
+}
+
+.education{
+    background-color: #D4CB92;
+}
+
+.experiences{
+    background-color: #E6E1C5;
+}
+
+.projects{
+    background-color: #BCD3F2;
+}
+
+.skills{
+    background-color: #395C6B;
+}
+
+.awards{
+    background-color: #395C6B;
+}
