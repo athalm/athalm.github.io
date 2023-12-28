@@ -39,7 +39,7 @@ section{
     width: fit-content;
     font-family: 'Inter', sans-serif;
     font-size: 100px;
-    padding-top: 50px;
+    padding-top: 60px;
     background-image: url(./resources/images/heading_bg.png);
     background-repeat: repeat;
     -webkit-background-clip: text; 
@@ -50,6 +50,7 @@ section{
     width: 60%;
     padding-top: 20px;
     font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
 }
 
 .socials_buttons_list{
@@ -73,6 +74,26 @@ a{
     margin-right: 40px;
     border-radius: 8px;
     font-weight: bolder;
+}
+
+.about_right{
+    float: right;
+    width: 40%;
+    padding-top: 80px;
+    padding-right: 80px; 
+    padding-bottom: 80px;
+}
+.about_left{
+    width: 59%;
+    float: left;
+}
+
+#mrunal_home_pg{
+    border-radius: 30px;
+    float: right;
+    width: 350px;
+    height: 420px;
+
 }
 
 .buttons{
