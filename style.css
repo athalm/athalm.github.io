@@ -59,10 +59,6 @@ section{
     padding-top: 20px;
 }
 
-a{
-    text-decoration: none;
-}
-
 .socials_buttons_list li{
     font-size: larger;
     width: 100px;
@@ -74,6 +70,16 @@ a{
     margin-right: 40px;
     border-radius: 8px;
     font-weight: bolder;
+}
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.socials_buttons_list li:hover{
+    color: black;
+    text-shadow: black;
 }
 
 .about_right{
