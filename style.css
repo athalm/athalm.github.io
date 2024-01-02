@@ -13,6 +13,13 @@ html, body{
     overflow: hidden;
 }
 
+#m_body canvas {
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+}
+
 .container{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
