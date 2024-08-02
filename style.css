@@ -181,6 +181,53 @@ a, a:visited, a:hover, a:active {
     background-color: #395C6B;
 }
 
-.awards{
+.contact{
     background-color: #395C6B;
+}
+
+.contact {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact button {
+    background-color: #13505B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #0a3d5a;
+}
+
+.contact #responseMessage {
+    margin-top: 20px;
 }

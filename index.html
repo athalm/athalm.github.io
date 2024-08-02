@@ -10,6 +10,9 @@
       href="https://fonts.googleapis.com/css?family=Poppins:400,700"
     />
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 </head>
 <body id="m_body">
     <div class="container">
@@ -66,21 +69,38 @@
         </section>
 
         <!-- Other sections omitted for brevity -->
-        <section class="experiences">
-          <h2>Experiences</h2>
-        </section>
         <section class="projects">
           <h2>Projects</h2>
         </section>
+
+        <section class="experiences">
+          <h2>Experiences</h2>
+        </section>
+
         <section class="skills">
           <h2>Skills</h2>
         </section>
-        <section class="awards">
-          <h2>Awards</h2>
-        </section>
 
+        <!-- Contact Section -->
+        <section class="contact">
+          <h2>Contact Me!</h2>
+          <form id="contactForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+              <button type="submit">Send Message</button>
+          </form>
+          <div id="responseMessage"></div>
+      </section>
 
     </div>
-    <script src="script.js"></script>
+    <script src="scripts/scroll.js"></script>
+    <script src="scripts/contact.js"></script>
 </body>
 </html>
