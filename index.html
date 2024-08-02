@@ -1,87 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mrunal Athaley</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="script.js"></script> -->
-    <script type="module">
-      import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
-      neonCursor({
-        el: document.getElementById('m_body'),
-        shaderPoints: 16,
-        curvePoints: 80,
-        curveLerp: 0.5,
-        radius1: 5,
-        radius2: 30,
-        velocityTreshold: 10,
-        sleepRadiusX: 100,
-        sleepRadiusY: 100,
-        sleepTimeCoefX: 0.0025,
-        sleepTimeCoefY: 0.0025
-    })
-    </script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins:400,700"
     />
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-  </head>
-  <body id="m_body">
+</head>
+<body id="m_body">
     <div class="container">
-      <section class="about">
-        <div class="about_left">
-          <div class="heading">
-            <h1 id="name_heading">MRUNAL<br>ATHALEY</h1>
-          </div>
-          <div class="head_description">
-            <p>Junior at Rensselaer Polytechnic Institute</p><br>
-            <p>Dual B.S. in Computer Science and Information Technology and Web Science</p><br>
-          </div>
-          <div class="socials">
-            <ul class="socials_buttons_list">
-              <li><a href="mailto:athalm@rpi.edu">Email</a></li>
-              <li><a href="./resources/documents/MRUNAL ATHALEY.pdf" target="_blank">Resume</a></li>
-              <li><a href="https://www.linkedin.com/in/mrunal-athaley/" target="_blank">LinkedIn</a></li>
-              <li><a href="https://github.com/athalm" target="_blank">GitHub</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="about_right">    
-          <img src="./resources/images/mrunal_home_page.jpg" id="mrunal_home_pg">
-        </div>
-      </section>
-      <section class="hobbies">
-        <div id="heading">Hello!</div>
-        <div id="hobb_cont">
-          I'm Mrunal Athaley, I'm currently a junior at RPI, pursuing a dual major in Computer Science and Information Technology and Web Science. When I'm not puzzling over coding problems and algorithms, I love to explore new places. I'm also passionate about learning new languages. I can speak 3 languages fluently (English, Marathi, and Hindi) and have learned German for 7 years. Apart from that, I also enjoy drawing, playing the flute, cooking, and baking. This website is a platform where I share my experiences, projects, and interests with the world.
-        </div>
-      </section>
+        <!-- Home Section -->
+        <section class="about">
+            <div class="about_left">
+                <div class="heading">
+                    <h1 id="name_heading">MRUNAL<br>ATHALEY</h1>
+                </div>
+                <div class="head_description">
+                    <p>Junior at Rensselaer Polytechnic Institute</p><br>
+                    <p>Dual B.S. in Computer Science and Information Technology and Web Science</p><br>
+                </div>
+                <div class="socials">
+                    <ul class="socials_buttons_list">
+                        <li><a href="mailto:athalm@rpi.edu">Email</a></li>
+                        <li><a href="./resources/documents/MRUNAL ATHALEY.pdf" target="_blank">Resume</a></li>
+                        <li><a href="https://www.linkedin.com/in/mrunal-athaley/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/athalm" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about_right">    
+                <img src="./resources/images/mrunal_home_page.jpg" id="mrunal_home_pg">
+            </div>
+        </section>
 
-      <section class="buttons">
-        <h1>Links</h1>
-        <div class="div_card" id="to_education">EDUCATION</div>
-        <div class="div_card" id="to_experience">EXPERIENCES</div>
-        <div class="div_card" id="to_projects">PROJECTS</div>
-        <div class="div_card" id="to_skills">SKILLS</div>
-        <div class="div_card" id="to_awards">AWARDS</div>
-      </section>
-      <section class="education">
-        <h2>Education</h2>
-      </section>
-      <section class="experiences">
-        <h2>Experiences</h2>
-      </section>
-      <section class="projects">
-        <h2>Projects</h2>
-      </section>
-      <section class="skills">
-        <h2>Skills</h2>
-      </section>
-      <section class="awards">
-        <h2>Awards</h2>
-      </section>
+        <!-- About Me Section -->
+        <section class="about_me">
+            <div class="scroll_container" id="scrollContainer">
+                <div class="slide biography">
+                    <h2>Biography</h2>
+                    <p>I am Mrunal Athaley, a junior at Rensselaer Polytechnic Institute, pursuing a dual B.S. in Computer Science and Information Technology and Web Science. With a strong academic record and a GPA of 3.89/4.00, I have been on the Dean's Honor List every semester. My long-term interests lie in the realm of data in healthcare, where I see immense potential for meaningful contributions. I am also deeply passionate about AI and ML concepts and look forward to engaging in projects related to these areas in the future.</p>
+                </div>
+                <div class="slide education">
+                    <h2>Education</h2>
+                    <p><strong>Rensselaer Polytechnic Institute - Troy, NY</strong><br>
+                    - Dual B.S. in Computer Science and Information Technology and Web Science<br>
+                    - GPA: 3.89/4.00<br>
+                    - Dean's Honor List every semester</p>
+                </div>
+                <div class="slide hobbies">
+                    <h2>Personal Life and Hobbies</h2>
+                    <p>When I'm not immersed in my studies or working on projects, I enjoy exploring new hobbies and interests. I am an avid reader, particularly of science fiction and mystery novels. I also love hiking and being in nature, which helps me relax and recharge. Additionally, I have a passion for photography, capturing the beauty of the world around me through my lens.</p>
+                </div>
+                <div class="slide story">
+                    <h2>My Story</h2>
+                    <p>Growing up in Pune, India, I was always fascinated by technology and its potential to solve real-world problems. My early exposure to computers and programming set the foundation for my academic and career pursuits. Over the years, I have had the opportunity to work on diverse projects and internships that have broadened my skill set and deepened my passion for software development.</p>
+                    <p>One of my most memorable experiences was interning at Infosys, where I led a team of interns to develop a movie ticketing website, earning second place for our project. This experience taught me the importance of teamwork, leadership, and innovative thinking. It also reinforced my desire to create technology that makes a difference in people's lives.</p>
+                </div>
+            </div>
+            <div class="arrow left" id="leftArrow">&#10094;</div>
+            <div class="arrow right" id="rightArrow">&#10095;</div>
+        </section>
+
+        <!-- Other sections omitted for brevity -->
+        <section class="experiences">
+          <h2>Experiences</h2>
+        </section>
+        <section class="projects">
+          <h2>Projects</h2>
+        </section>
+        <section class="skills">
+          <h2>Skills</h2>
+        </section>
+        <section class="awards">
+          <h2>Awards</h2>
+        </section>
+
+
     </div>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,17 +1,33 @@
-// import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
+const scrollContainer = document.getElementById('scrollContainer');
+const leftArrow = document.getElementById('leftArrow');
+const rightArrow = document.getElementById('rightArrow');
 
-// neonCursor({
-//   el: document.getElementById('m_body'),
-//   shaderPoints: 16,
-//   curvePoints: 80,
-//   curveLerp: 0.5,
-//   radius1: 5,
-//   radius2: 30,
-//   velocityTreshold: 10,
-//   sleepRadiusX: 100,
-//   sleepRadiusY: 100,
-//   sleepTimeCoefX: 0.0025,
-//   sleepTimeCoefY: 0.0025
-// })
+let currentIndex = 0;
 
-// https://codepen.io/soju22/pen/wvyBorP
+const scrollSlides = () => {
+    currentIndex = (currentIndex + 1) % scrollContainer.children.length;
+    scrollContainer.scrollTo({
+        left: scrollContainer.children[currentIndex].offsetLeft,
+        behavior: 'smooth'
+    });
+};
+
+let intervalId = setInterval(scrollSlides, 8000);
+
+const scrollToSlide = (index) => {
+    currentIndex = index;
+    scrollContainer.scrollTo({
+        left: scrollContainer.children[currentIndex].offsetLeft,
+        behavior: 'smooth'
+    });
+    clearInterval(intervalId);
+    intervalId = setInterval(scrollSlides, 8000);
+};
+
+rightArrow.addEventListener('click', () => {
+    scrollToSlide((currentIndex + 1) % scrollContainer.children.length);
+});
+
+leftArrow.addEventListener('click', () => {
+    scrollToSlide((currentIndex - 1 + scrollContainer.children.length) % scrollContainer.children.length);
+});

@@ -1,96 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Poppins', sans-serif; */
     font-family: 'Roboto Mono', monospace;
 }
 
-html, body{
+html, body {
     overflow: hidden;
 }
 
-#m_body canvas {
-    display: block;
-    position: fixed;
-    z-index: -1;
-    top: 0;
-}
-
-.container{
+.container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
 }
 
-section{
+section {
     height: 100vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     scroll-snap-align: start;
 }
 
-.about{
+.about {
     background-color: black;
     color: white;
     padding-left: 80px;
-    /* background-image: radial-gradient(#45c5a7 1.4000000000000001px, #000000b5 1.4000000000000001px); */
-    /* background-size: 28px 28px; */
 }
 
-#name_heading{
+#name_heading {
     width: fit-content;
     font-family: 'Inter', sans-serif;
     font-size: 100px;
     padding-top: 60px;
     background-image: url(./resources/images/heading_bg.png);
     background-repeat: repeat;
-    -webkit-background-clip: text; 
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.head_description{
+.head_description {
     width: 60%;
     padding-top: 20px;
     font-family: 'Roboto Mono', monospace;
     font-size: 17px;
 }
 
-.socials_buttons_list{
+.socials_buttons_list {
     list-style-type: none;
     overflow: hidden;
     padding-top: 20px;
     cursor: pointer;
 }
 
-.socials_buttons_list li{
+.socials_buttons_list li {
     display: inline-block;
     margin-right: 20px;
 }
 
-.socials_buttons_list li > a{
+.socials_buttons_list li > a {
     width: 140px;
     cursor: pointer;
     font-size: 1.2rem;
     border: white 0.15em solid;
     text-align: center;
-    padding: 0.25em 1.25em 0.25em 1.25em;
+    padding: 0.25em 1.25em;
     color: white;
     display: inline-block;
     border-radius: 8px;
     font-weight: bolder;
     text-shadow: 
-    0 0 0.125em black,
-    0 0 0.45em white;
+        0 0 0.125em black,
+        0 0 0.45em white;
     box-shadow: inset 0 0 0.5em 0 white, 0 0 0.5em 0 white;
     position: relative;
 }
 
-.socials_buttons_list li >a:hover,  .socials_buttons_list li >a:focus{
+.socials_buttons_list li > a:hover, .socials_buttons_list li > a:focus {
     background-color: white;
     color: black;
     border: white 0.15em solid;
@@ -103,59 +90,83 @@ a, a:visited, a:hover, a:active {
     color: inherit;
 }
 
-.about_right{
+.about_right {
     float: right;
     width: 40%;
     padding-top: 80px;
-    padding-right: 80px; 
+    padding-right: 80px;
     padding-bottom: 80px;
 }
 
-.about_left{
+.about_left {
     width: 59%;
     float: left;
 }
 
-#mrunal_home_pg{
+#mrunal_home_pg {
     border-radius: 30px;
     float: right;
     width: 350px;
     height: 420px;
 }
 
-/* About me, hobbies page */
-.hobbies{
+.about_me {
+    position: relative;
     background-color: #13505B;
     color: white;
 }
 
-#heading{
-    padding-top: 60px;
-    font-size: 65px;
-    font-weight: bold;
-    text-align: center;
+.scroll_container {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    height: 100%;
 }
 
-#hobb_cont{
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 40px;
-    font-size: 17px;
+.slide {
+    min-width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
 }
 
-.highlight_yellow{
+.slide h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.slide h2:hover {
     color: #E4F335;
+    transform: translateY(-5px);
 }
 
-/* Links page */
-
-.buttons{
-    background-color: #BDE5E1;
-    color: #025764;
+.biography, .education, .hobbies, .story {
+    background-color: transparent;
 }
 
-.education{
-    background-color: #D4CB92;
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
 }
 
 .experiences{
