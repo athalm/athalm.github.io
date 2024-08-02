@@ -181,12 +181,8 @@ a, a:visited, a:hover, a:active {
     background-color: #395C6B;
 }
 
-.contact{
-    background-color: #395C6B;
-}
-
 .contact {
-    background: #ffffff;
+    background-color: #ffffff;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
