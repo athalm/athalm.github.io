@@ -1,0 +1,95 @@
+.projects {
+    /* background-color: #F0F0F0;
+    color: #333; */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 80%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 80%;
+}
+
+.carousel-slide {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    height: 80%;
+}
+
+.project-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-image:hover {
+    transform: scale(1.05) rotate(-0.05rad);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.project-details {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    
+}
+
+.carousel-arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background-color: teal;
+}
