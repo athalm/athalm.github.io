@@ -1,106 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mrunal Athaley</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/aboutme.css" />
+    <link rel="stylesheet" href="styles/project.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins:400,700"
     />
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        emailjs.init(window.emailjsPublicKey);
+      });
+    </script>
+  </head>
+  <body id="m_body">
+    <nav id="navbar">
+      <div id="nav-icon" onclick="toggleNav()">☰</div>
+      <div id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about_me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-</head>
-<body id="m_body">
-    <div class="container">
-        <!-- Home Section -->
-        <section class="about">
-            <div class="about_left">
-                <div class="heading">
-                    <h1 id="name_heading">MRUNAL<br>ATHALEY</h1>
-                </div>
-                <div class="head_description">
-                    <p>Junior at Rensselaer Polytechnic Institute</p><br>
-                    <p>Dual B.S. in Computer Science and Information Technology and Web Science</p><br>
-                </div>
-                <div class="socials">
-                    <ul class="socials_buttons_list">
-                        <li><a href="mailto:athalm@rpi.edu">Email</a></li>
-                        <li><a href="./resources/documents/MRUNAL ATHALEY.pdf" target="_blank">Resume</a></li>
-                        <li><a href="https://www.linkedin.com/in/mrunal-athaley/" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/athalm" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="about_right">    
-                <img src="./resources/images/mrunal_home_page.jpg" id="mrunal_home_pg">
-            </div>
-        </section>
-
-        <!-- About Me Section -->
-        <section class="about_me">
-            <div class="scroll_container" id="scrollContainer">
-                <div class="slide biography">
-                    <h2>Biography</h2>
-                    <p>I am Mrunal Athaley, a junior at Rensselaer Polytechnic Institute, pursuing a dual B.S. in Computer Science and Information Technology and Web Science. With a strong academic record and a GPA of 3.89/4.00, I have been on the Dean's Honor List every semester. My long-term interests lie in the realm of data in healthcare, where I see immense potential for meaningful contributions. I am also deeply passionate about AI and ML concepts and look forward to engaging in projects related to these areas in the future.</p>
-                </div>
-                <div class="slide education">
-                    <h2>Education</h2>
-                    <p><strong>Rensselaer Polytechnic Institute - Troy, NY</strong><br>
-                    - Dual B.S. in Computer Science and Information Technology and Web Science<br>
-                    - GPA: 3.89/4.00<br>
-                    - Dean's Honor List every semester</p>
-                </div>
-                <div class="slide hobbies">
-                    <h2>Personal Life and Hobbies</h2>
-                    <p>When I'm not immersed in my studies or working on projects, I enjoy exploring new hobbies and interests. I am an avid reader, particularly of science fiction and mystery novels. I also love hiking and being in nature, which helps me relax and recharge. Additionally, I have a passion for photography, capturing the beauty of the world around me through my lens.</p>
-                </div>
-                <div class="slide story">
-                    <h2>My Story</h2>
-                    <p>Growing up in Pune, India, I was always fascinated by technology and its potential to solve real-world problems. My early exposure to computers and programming set the foundation for my academic and career pursuits. Over the years, I have had the opportunity to work on diverse projects and internships that have broadened my skill set and deepened my passion for software development.</p>
-                    <p>One of my most memorable experiences was interning at Infosys, where I led a team of interns to develop a movie ticketing website, earning second place for our project. This experience taught me the importance of teamwork, leadership, and innovative thinking. It also reinforced my desire to create technology that makes a difference in people's lives.</p>
-                </div>
-            </div>
-            <div class="arrow left" id="leftArrow">&#10094;</div>
-            <div class="arrow right" id="rightArrow">&#10095;</div>
-        </section>
-
-        <!-- Other sections omitted for brevity -->
-        <section class="projects">
-          <h2>Projects</h2>
-        </section>
-
-        <section class="experiences">
-          <h2>Experiences</h2>
-        </section>
-
-        <section class="skills">
-          <h2>Skills</h2>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact">
-          <h2>Contact Me!</h2>
-          <form id="contactForm">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-
-              <button type="submit">Send Message</button>
-          </form>
-          <div id="responseMessage"></div>
+    <div class="container" id="app">
+      <!-- Home Section -->
+      <section class="about" id="home">
+        <div class="about_left">
+          <div class="heading">
+            <h1 id="name_heading">MRUNAL<br />ATHALEY</h1>
+          </div>
+          <div class="head_description">
+            <p id="intro">Junior at Rensselaer Polytechnic Institute</p>
+            <br />
+            <p id="degree">
+              Dual B.S. in Computer Science and Information Technology and Web
+              Science
+            </p>
+            <br />
+          </div>
+          <div class="socials">
+            <ul class="socials_buttons_list">
+              <li><a href="mailto:athalm@rpi.edu">Email</a></li>
+              <li>
+                <a
+                  href="./resources/documents/MRUNAL ATHALEY.pdf"
+                  target="_blank"
+                  >Resume</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/mrunal-athaley/"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/athalm" target="_blank">GitHub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="about_right">
+          <img
+            src="./resources/images/mrunal_home_page.jpg"
+            id="mrunal_home_pg"
+          />
+        </div>
       </section>
 
+      <!-- About Me Section -->
+      <section class="about_me" id="about_me">
+        <div class="scroll_container" id="scrollContainer">
+          <div class="slide biography">
+            <h2>Biography</h2>
+            <p>
+              I am Mrunal Athaley, a junior at Rensselaer Polytechnic Institute,
+              pursuing a dual B.S. in Computer Science and Information
+              Technology and Web Science. With a strong academic record and a
+              GPA of 3.89/4.00, I have been on the Dean's Honor List every
+              semester. My long-term interests lie in the realm of data in
+              healthcare, where I see immense potential for meaningful
+              contributions. I am also deeply passionate about AI and ML
+              concepts and look forward to engaging in projects related to these
+              areas in the future.
+            </p>
+          </div>
+          <div class="slide education">
+            <h2>Education</h2>
+            <p>
+              <strong>Rensselaer Polytechnic Institute - Troy, NY</strong><br />
+              - Dual B.S. in Computer Science and Information Technology and Web
+              Science<br />
+              - GPA: 3.89/4.00<br />
+              - Dean's Honor List every semester
+            </p>
+          </div>
+          <div class="slide hobbies">
+            <h2>Personal Life and Hobbies</h2>
+            <p>
+              When I'm not immersed in my studies or working on projects, I
+              enjoy exploring new hobbies and interests. I am an avid reader,
+              particularly of science fiction and mystery novels. I also love
+              hiking and being in nature, which helps me relax and recharge.
+              Additionally, I have a passion for photography, capturing the
+              beauty of the world around me through my lens.
+            </p>
+          </div>
+          <div class="slide story">
+            <h2>My Story</h2>
+            <p>
+              Growing up in Pune, India, I was always fascinated by technology
+              and its potential to solve real-world problems. My early exposure
+              to computers and programming set the foundation for my academic
+              and career pursuits. Over the years, I have had the opportunity to
+              work on diverse projects and internships that have broadened my
+              skill set and deepened my passion for software development.
+            </p>
+            <p>
+              One of my most memorable experiences was interning at Infosys,
+              where I led a team of interns to develop a movie ticketing
+              website, earning second place for our project. This experience
+              taught me the importance of teamwork, leadership, and innovative
+              thinking. It also reinforced my desire to create technology that
+              makes a difference in people's lives.
+            </p>
+          </div>
+        </div>
+        <div class="arrow left" id="leftArrow">&#10094;</div>
+        <div class="arrow right" id="rightArrow">&#10095;</div>
+      </section>
+
+      <!-- Project section -->
+      <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="carousel-slide">
+              <img
+                src="./resources/images/project1_logo.png"
+                class="project-image"
+                alt="Project 1"
+              />
+              <div class="project-details">
+                <h3>Project 1</h3>
+                <p><strong>Role:</strong> Developer</p>
+                <p><strong>Duration:</strong> June 2023 - August 2023</p>
+                <p><strong>About:</strong> Description of Project 1...</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="./resources/images/heading_bg.png"
+                class="project-image"
+                alt="Project 2"
+              />
+              <div class="project-details">
+                <h3>Project 2</h3>
+                <p><strong>Role:</strong> Designer</p>
+                <p><strong>Duration:</strong> January 2023 - April 2023</p>
+                <p><strong>About:</strong> Description of Project 2...</p>
+              </div>
+            </div>
+            <!-- Add more slides as needed -->
+          </div>
+          <div class="carousel-controls">
+            <div class="carousel-arrow left-arrow">&#10094;</div>
+            <div class="carousel-arrow right-arrow">&#10095;</div>
+          </div>
+          <div class="carousel-indicators">
+            <!-- Indicators will be generated dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <section class="experiences" id="experiences">
+        <h2>Experiences</h2>
+      </section>
+
+      <section class="skills">
+        <h2>Skills</h2>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact_section" id="contact">
+        <br />
+        <div class="contact">
+          <h2>Contact Me!</h2>
+          <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+          <div id="responseMessage"></div>
+        </div>
+      </section>
     </div>
     <script src="scripts/scroll.js"></script>
     <script src="scripts/contact.js"></script>
-</body>
+    <script src="scripts/project.js"></script>
+    <script src="scripts/cursor.js"></script>
+    <script src="scripts/nav.js"></script>
+  </body>
 </html>
