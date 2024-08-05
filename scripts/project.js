@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         intervalId = setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;
             updateCarousel();
-        }, 15000); // Move every 15 seconds
+        }, 8000); // Move every 15 seconds
     }
 
     function handleMouseDown() {
