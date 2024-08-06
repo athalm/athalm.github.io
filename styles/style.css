@@ -25,39 +25,3 @@ section {
   height: 100vh;
   scroll-snap-align: start;
 }
-
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1001;
-  padding: 10px;
-}
-
-#nav-icon {
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
-#nav-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 40px;
-  left: 10px;
-  background-color: black;
-  padding: 10px;
-  border: 1px solid #00ff00;
-}
-
-#nav-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 5px;
-}
-
-#nav-menu a:hover {
-  background-color: #00ff00;
-  color: black;
-}

@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         intervalId = setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;
             updateCarousel();
-        }, 8000);
+        }, 6000);
     }
 
     function handleMouseDown() {
