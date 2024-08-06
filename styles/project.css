@@ -2,7 +2,7 @@
     padding: 40px 20px;
     text-align: center;
     color: teal;
-    background-color: #000; /* Black background */
+    background-color: #000;
 }
 
 .projects h2 {
@@ -29,7 +29,7 @@
     min-width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #1a1a1a; /* Dark background for slides */
+    background-color: #1a1a1a;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     margin: 0 10px;
@@ -52,7 +52,7 @@
     margin-left: 20px;
     text-align: left;
     max-width: 600px;
-    color: #E4F335; /* Text color for better contrast */
+    color: #E4F335;
 }
 
 .project-details h3 {
@@ -107,5 +107,5 @@
 }
 
 .carousel-indicators .active {
-    background-color: #E4F335; /* Active indicator color */
+    background-color: #E4F335;
 }

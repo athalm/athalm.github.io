@@ -24,13 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = homeSection.getBoundingClientRect();
         if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
             typingElements.forEach(element => applyTypingEffect(element));
-            window.removeEventListener('scroll', onScroll); // Remove listener after typing effect is triggered
+            window.removeEventListener('scroll', onScroll);
         }
     }
 
-    // Apply typing effect on page load if home section is visible
     onScroll();
 
-    // Apply typing effect when scrolling into view
     window.addEventListener('scroll', onScroll);
 });

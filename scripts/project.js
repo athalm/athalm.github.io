@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let intervalId;
 
-    // Set the width of each slide to match the carousel container
     const updateSlideWidths = () => {
         const containerWidth = document.querySelector('.carousel-container').offsetWidth;
         slides.forEach(slide => {
@@ -13,11 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Call the function initially and on window resize
     updateSlideWidths();
     window.addEventListener('resize', updateSlideWidths);
 
-    // Generate carousel indicators
     slides.forEach((slide, index) => {
         const dot = document.createElement('div');
         dot.classList.add('carousel-indicator');
@@ -43,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         intervalId = setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;
             updateCarousel();
-        }, 15000); // Move every 15 seconds
+        }, 8000);
     }
 
     function handleMouseDown() {
@@ -70,6 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
     carousel.addEventListener('mousedown', handleMouseDown);
     carousel.addEventListener('mouseup', handleMouseUp);
 
-    // Start carousel rotation
     startCarousel();
 });

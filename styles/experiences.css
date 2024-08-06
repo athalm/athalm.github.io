@@ -2,7 +2,7 @@
     padding: 40px 20px;
     text-align: center;
     color: teal;
-    background-color: #000; /* Black background */
+    background-color: #000;
 }
 
 .experiences h2 {
@@ -16,8 +16,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Adjust spacing between cards */
-    flex-wrap: wrap; /* Wrap cards if needed */
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .experience-card {
