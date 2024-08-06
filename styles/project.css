@@ -1,111 +1,111 @@
 .projects {
-    padding: 40px 20px;
-    text-align: center;
-    color: teal;
-    background-color: #000;
+  padding: 40px 20px;
+  text-align: center;
+  color: teal;
+  background-color: #000;
 }
 
 .projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #E4F335;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #e4f335;
 }
 
 .carousel-container {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
-    display: flex;
-    align-items: center;
-    min-width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    margin: 0 10px;
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 0 10px;
 }
 
 .project-image {
-    width: 149px;
-    height: 149px;
-    object-fit:fill;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 149px;
+  height: 149px;
+  object-fit: fill;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-image:hover {
-    transform: scale(1.05) rotate(-0.05rad);
-    box-shadow: 0 0 10px rgba(19, 80, 91, 0.8);
+  transform: scale(1.05) rotate(-0.05rad);
+  box-shadow: 0 0 10px rgba(19, 80, 91, 0.8);
 }
 
 .project-details {
-    margin-left: 20px;
-    text-align: left;
-    max-width: 600px;
-    color: #E4F335;
+  margin-left: 20px;
+  text-align: left;
+  max-width: 600px;
+  color: #e4f335;
 }
 
 .project-details h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #E4F335;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e4f335;
 }
 
 .project-details p {
-    margin: 5px 0;
-    color: #B0B0B0;
+  margin: 5px 0;
+  color: #b0b0b0;
 }
 
 .carousel-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
 }
 
 .carousel-arrow {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    transition: background-color 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
 }
 
 .carousel-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
 
 .carousel-indicators div {
-    width: 12px;
-    height: 12px;
-    background-color: #333;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 12px;
+  height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .carousel-indicators .active {
-    background-color: #E4F335;
+  background-color: #e4f335;
 }

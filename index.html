@@ -10,11 +10,15 @@
     <link rel="stylesheet" href="styles/project.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/experiences.css" />
+    <link rel="stylesheet" href="styles/skills.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins:400,700"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Inter"
       rel="stylesheet"
@@ -31,23 +35,16 @@
     </script>
   </head>
   <body id="m_body">
-
     <div class="container" id="app">
       <!-- Home Section -->
-      <section class="about" id="home">
-        <div class="about_left">
-          <div class="heading">
-            <h1 id="name_heading">MRUNAL<br />ATHALEY</h1>
-          </div>
-          <div class="head_description">
-            <p id="intro">Junior at Rensselaer Polytechnic Institute</p>
-            <br />
-            <p id="degree">
-              Dual B.S. in Computer Science and Information Technology and Web
-              Science
-            </p>
-            <br />
-          </div>
+      <section class="home" id="home">
+        <div class="home_content">
+          <h1 id="name_heading">MRUNAL<br />ATHALEY</h1>
+          <p id="intro">Junior at Rensselaer Polytechnic Institute</p>
+          <p id="degree">
+            Dual B.S. in Computer Science and Information Technology and Web
+            Science
+          </p>
           <div class="socials">
             <ul class="socials_buttons_list">
               <li><a href="mailto:athalm@rpi.edu">Email</a></li>
@@ -70,12 +67,6 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="about_right">
-          <img
-            src="./resources/images/mrunal_home_page.jpg"
-            id="mrunal_home_pg"
-          />
         </div>
       </section>
 
@@ -275,65 +266,141 @@
         </div>
       </section>
 
+      <!-- Experiences section -->
       <section class="experiences" id="experiences">
         <h2>Experiences</h2>
         <div class="experience-cards">
           <div class="experience-card active">
-            <img src="./resources/images/nyiso_logo.jpeg" alt="NYISO Logo" class="experience-logo"/>
+            <img
+              src="./resources/images/nyiso_logo.jpeg"
+              alt="NYISO Logo"
+              class="experience-logo"
+            />
             <div class="experience-details">
               <h3>Software IT Technologies Intern</h3>
               <p><strong>NYISO · Internship</strong></p>
               <p>May 2024 - Present</p>
               <ul>
-                <li>Penetration Testing: Discovered an XSS vulnerability in a web application and authored a security report about it.</li>
-                <li>API Development: Created two GET API endpoints for an upload/download bidding system using Spring Boot and Java, adhering to Agile methodologies.</li>
-                <li>Data Grid Component: Developed a custom React data grid component.</li>
+                <li>
+                  Penetration Testing: Discovered an XSS vulnerability in a web
+                  application and authored a security report about it.
+                </li>
+                <li>
+                  API Development: Created two GET API endpoints for an
+                  upload/download bidding system using Spring Boot and Java,
+                  adhering to Agile methodologies.
+                </li>
+                <li>
+                  Data Grid Component: Developed a custom React data grid
+                  component.
+                </li>
               </ul>
             </div>
           </div>
           <div class="experience-card">
-            <img src="./resources/images/rensselaer_polytechnic_institute_logo.jpeg" alt="Help Desk Logo" class="experience-logo"/>
+            <img
+              src="./resources/images/rensselaer_polytechnic_institute_logo.jpeg"
+              alt="Help Desk Logo"
+              class="experience-logo"
+            />
             <div class="experience-details">
               <h3>Help Desk Consultant</h3>
               <p><strong>Voorhees Computing Center · Part-time</strong></p>
               <p>Sep 2022 - Present</p>
               <ul>
-                <li>Interacting with students, staff, and faculty by phone, email, or in-person to provide technical support.</li>
+                <li>
+                  Interacting with students, staff, and faculty by phone, email,
+                  or in-person to provide technical support.
+                </li>
                 <li>Diagnosing and resolving software and hardware issues.</li>
               </ul>
             </div>
           </div>
           <div class="experience-card">
-            <img src="./resources/images/leapscale_logo.jpeg" alt="Leap & Scale Logo" class="experience-logo"/>
+            <img
+              src="./resources/images/leapscale_logo.jpeg"
+              alt="Leap & Scale Logo"
+              class="experience-logo"
+            />
             <div class="experience-details">
               <h3>Summer Intern</h3>
               <p><strong>Leap & Scale · Internship</strong></p>
               <p>May 2019</p>
               <ul>
-                <li>Worked with a team on the project ideation of IoT-based swim gear with an app component to track health stats.</li>
-                <li>Gained experience in IoT technology and cloud computing.</li>
+                <li>
+                  Worked with a team on the project ideation of IoT-based swim
+                  gear with an app component to track health stats.
+                </li>
+                <li>
+                  Gained experience in IoT technology and cloud computing.
+                </li>
               </ul>
             </div>
           </div>
           <div class="experience-card">
-            <img src="./resources/images/infosys_logo.jpeg" alt="Infosys Logo" class="experience-logo"/>
+            <img
+              src="./resources/images/infosys_logo.jpeg"
+              alt="Infosys Logo"
+              class="experience-logo"
+            />
             <div class="experience-details">
               <h3>Summer Intern</h3>
               <p><strong>Infosys · Internship</strong></p>
               <p>May 2018</p>
               <ul>
-                <li>Acquired experience in HTML, CSS, JavaScript for web development.</li>
-                <li>Led a team of interns to develop a movie ticketing website, winning a second-place award for the project.</li>
+                <li>
+                  Acquired experience in HTML, CSS, JavaScript for web
+                  development.
+                </li>
+                <li>
+                  Led a team of interns to develop a movie ticketing website,
+                  winning a second-place award for the project.
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      
-      
 
-      <section class="skills">
+      <!-- Skills section -->
+      <section id="skills">
         <h2>Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Web Development</h3>
+            <p>
+              HTML, CSS, JavaScript, TypeScript, React, NodeJS, Express, PHP,
+              jQuery, AJAX, JSON, XML, Bootstrap, Website Design
+            </p>
+          </div>
+          <div class="skill-category">
+            <h3>Backend Development</h3>
+            <p>Python, Java (Spring Boot), REST API, MySQL, MongoDB</p>
+          </div>
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <p>C, C++, Java, MIPS, Verilog</p>
+          </div>
+          <div class="skill-category">
+            <h3>Data Analysis</h3>
+            <p>R, Pandas</p>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <p>
+              Version Control: Git, GitHub, Microsoft Azure, Oracle Cloud
+              Infrastructure, Vite, Vitest, Figma, Balsamiq
+            </p>
+          </div>
+          <div class="skill-category">
+            <h3>Additional Skills</h3>
+            <p>DevOps, Algorithms, Penetration Testing</p>
+          </div>
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <p>English, Marathi, Hindi, German</p>
+          </div>
+        </div>
       </section>
 
       <!-- Contact Section -->
