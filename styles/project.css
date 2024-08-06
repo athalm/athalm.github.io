@@ -2,7 +2,7 @@
     padding: 40px 20px;
     text-align: center;
     color: teal;
-    background-color: #000;
+    background-color: #000; /* Black background */
 }
 
 .projects h2 {
@@ -29,16 +29,16 @@
     min-width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Dark background for slides */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     margin: 0 10px;
 }
 
 .project-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 149px;
+    height: 149px;
+    object-fit:fill;
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -52,7 +52,7 @@
     margin-left: 20px;
     text-align: left;
     max-width: 600px;
-    color: #E4F335;
+    color: #E4F335; /* Text color for better contrast */
 }
 
 .project-details h3 {

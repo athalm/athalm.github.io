@@ -5,6 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let intervalId;
 
+    // Set the width of each slide to match the carousel container
+    const updateSlideWidths = () => {
+        const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+        slides.forEach(slide => {
+            slide.style.width = `${containerWidth}px`;
+        });
+    };
+
+    // Call the function initially and on window resize
+    updateSlideWidths();
+    window.addEventListener('resize', updateSlideWidths);
+
     // Generate carousel indicators
     slides.forEach((slide, index) => {
         const dot = document.createElement('div');
@@ -20,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+        carousel.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
         document.querySelectorAll('.carousel-indicator').forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
         });
@@ -30,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         intervalId = setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;
             updateCarousel();
-        }, 8000); // Move every 15 seconds
+        }, 15000); // Move every 15 seconds
     }
 
     function handleMouseDown() {
