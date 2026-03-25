@@ -284,7 +284,7 @@
 
     /* ── SKILLS ── */
     #skills { background: var(--bg); }
-    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
     .skill-card {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: var(--r); padding: 1.4rem;
@@ -362,6 +362,9 @@
     .d3 { transition-delay: 0.21s; }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 860px) {
       :root { --pad: 1.25rem; }
       .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -606,7 +609,7 @@
         <div class="proj-card reveal d2">
           <div class="proj-header">
             <span class="proj-num">03</span>
-            
+            <a href="https://github.com/LabConnect-RCOS" target="_blank" rel="noopener" class="proj-arrow" title="View on GitHub">↗</a>
           </div>
           <div class="proj-title">LabConnect - RCOS</div>
           <div class="proj-desc">Open-source platform centralizing campus lab and research opportunities. Built and maintained over 15 months with a Python-Flask backend and React frontend.</div>
@@ -628,6 +631,22 @@
             <span class="proj-tag">Google Cloud</span>
             <span class="proj-tag">ChatGPT API</span>
             <span class="proj-tag">Hackathon · 24hrs</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-header">
+            <span class="proj-num">05</span>
+            <a href="https://github.com/athalm/semantle-cognitive-solver" target="_blank" rel="noopener" class="proj-arrow" title="View on GitHub">↗</a>
+          </div>
+          <div class="proj-title">Semantle Cognitive Solver</div>
+          <div class="proj-desc">An AI agent that solves the Semantle word puzzle by mimicking human - not optimal machine - semantic search. GloVe embeddings provide the semantic map; six cognitive mechanisms (bounded memory, explore/exploit tradeoffs, frustration-triggered restarts, thematic drift, confidence slow-down, and category commitment) control how it's navigated. Built for Human &amp; Machine Learning at RPI.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">GloVe · NLP</span>
+            <span class="proj-tag">gensim</span>
+            <span class="proj-tag">Cognitive Modeling</span>
+            <span class="proj-tag">Bounded Rationality</span>
           </div>
         </div>
 
@@ -727,7 +746,16 @@
           <div class="skill-chips">
             <span class="chip">Git / GitHub</span><span class="chip">Azure</span>
             <span class="chip">Agile / Scrum</span><span class="chip">Vitest</span>
-            <span class="chip">Balsamiq</span><span class="chip">Pandas</span>
+            <span class="chip">Balsamiq</span>
+          </div>
+        </div>
+        <div class="skill-card reveal d2">
+          <div class="skill-cat">Data &amp; ML</div>
+          <div class="skill-chips">
+            <span class="chip">Python</span><span class="chip">gensim</span>
+            <span class="chip">NumPy</span><span class="chip">Pandas</span>
+            <span class="chip">GloVe · NLP</span><span class="chip">Cognitive Modeling</span>
+            <span class="chip">Data Mining</span>
           </div>
         </div>
       </div>
@@ -744,12 +772,12 @@
           <p class="contact-sub">Always open to interesting conversations - whether it's a role, a project, or just talking about what's next in tech.</p>
         </div>
         <div class="contact-cards reveal d1">
-          <a class="contact-card" href="mailto:mrunal.athaley@gmail.com">
+          <a class="contact-card" href="/cdn-cgi/l/email-protection#97fae5e2f9f6fbb9f6e3fff6fbf2eed7f0faf6fefbb9f4f8fa">
             <div class="contact-card-left">
               <div class="contact-icon">✉</div>
               <div>
                 <div class="contact-label">Email</div>
-                <div class="contact-val">mrunal.athaley@gmail.com</div>
+                <div class="contact-val"><span class="__cf_email__" data-cfemail="7f120d0a111e13511e0b171e131a063f18121e1613511c1012">[email&#160;protected]</span></div>
               </div>
             </div>
             <span class="contact-arr">↗</span>
@@ -794,7 +822,7 @@
     <span class="foot">Albany, NY</span>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Reveal on scroll - with immediate check for elements already in view
     const revealEls = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver(entries => {
@@ -808,13 +836,13 @@
 
     revealEls.forEach(el => io.observe(el));
 
-    // Fallback: if page loads with elements in viewport, reveal them immediately
-    setTimeout(() => {
-      revealEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight) el.classList.add('visible');
-      });
-    }, 100);
+    // Fallback: if page loads with elements already in viewport, reveal them immediately
+    revealEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('visible');
+      }
+    });
   </script>
 </body>
 </html>
